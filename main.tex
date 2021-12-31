@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{listings, xcolor}
+\lstset{
+    tabsize = 4, 
+    showstringspaces = false, 
+    numbers = left, 
+    commentstyle = \color{green},
+    keywordstyle = \color{blue},
+    stringstyle = \color{red}, 
+    rulecolor = \color{black},
+    basicstyle = \small \ttfamily, 
+    breaklines = true,
+    numberstyle = \tiny,
+}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\title{Programmering intro}
+\date{}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\clearpage
+		\section{Intro}
+			The following document are the basic information to start programming in Java. For more code information the exercises can be viewed.
+		\section{Programming languages, compilers, and interpreters}
+			Most languages are high-level languages and therefore easy for humans to read.\\
+			High-leveled languages has to be compiled to machine language.\\
+			Assembly language is low level and almost machine language but with some translations.\\
+			Interoreter is a live translation form high-level language to machine code, but is way slower than a compiler but more flexible from machine to machine.\\
+			Java is a combination of interpreter and compiler. First the code is compiled into bytecode fromwhich a java virtual machine interpretates it. This makes the bytecode portable from machine to machine and light-weight when a compiler is not needed.\\
+			JVM uses a Just-in-Time (JIT) compiler, which compiles code segments and save them for future use.\\
+		\section{A sip of Java}
+			The most simple Java program is:
+			\begin{lstlisting}[language = Java , frame = trBL , firstnumber = last]
+public class ProgramName {
+	public static void main(String[] args)  {
+	}
+}
+			\end{lstlisting}
+			Here ProgramName is also the file name, so in this case the file name is $ProgramName.java$\\
+			Main is a method and methods are used like functions.\\
+			The main method is a static method, which means it does relate to any object but rather only relates to the class.\\
+			Main is a void which means it will not return anything.\\
+			The reason for the access modfier $public$ is due to otherwise the JVM would not be able to access the main method class, due to it being outside the application.\\[8mm]
+			To import a library the syntax is $import java.util.Scanner$ as an example for the Scanner class from the library java.util\\
+			To invoke a method in an object first the object name is written then a dot followed by the method and parenthesis with optional arguments $System.out.println("test")$. Here the object is System.out which itself is part of the System class.\\
+		\section{Variables}
+			Primitive data types are variabled declared with $int,char,double...$ unlike class type which is declared in classes\\
+			The variable identifier (name) can only contain letters, numbers and underscore and can not start with a number\\
+			Identificers for variables should never be capitalized unlike classes which is capitalized\\
+			For constants the keyword $final$ can be used in the declaration and these constant often use underscore for spaces and are all capitalized.\\
+		\section{Documentation}
+			To comment code a single line is done by $//$, multiline is $/* */$ and for compatibility with javadoc $/** */$ is used.\\
+			A code should always contain a header comment which describes the code, who made it, last edit and purpose like assignment.\\
+		\section{Loops}
+			The increment should always happen at the end of the loop.\\
+			The most simplie loops are while which first check statement and then maybe execute the body of the loop, and do while which first executes then checks the statement if a loop should be done.\\
+			
+			
+\end{document}
+
